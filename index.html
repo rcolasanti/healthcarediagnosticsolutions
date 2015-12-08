@@ -42,6 +42,7 @@
   </div>
 </nav>
 
+<!-- jumbotron Header text and backgrond image -->
 <div class="jumbotron text-center">
   <h1>Healthcare Diagnostic Solutions</h1>
   <p>We specialize in blablablabbbb</p>
@@ -61,6 +62,7 @@
   </div>
 </div>
 
+<!-- Container (Values Section) -->
 <div class="container-fluid  altPanel">
   <div class="row">
     <div class="col-sm-4">
@@ -146,31 +148,34 @@
   </div>
 </div>
 
-<div id="googleMap" style="height:400px;width:100%;"></div>
 
 <!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
+//LOcation of Universirty of Southwales
 var myCenter = new google.maps.LatLng(51.5928299,-3.3243598);
 
 function initialize() {
 var mapProp = {
-  center:myCenter,
+  center:myCenter, // location
   zoom:12,
   scrollwheel:false,
   draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
+  mapTypeId:google.maps.MapTypeId.ROADMAP  // set to road map
   };
 
+// create map instance and place ar #googleMap
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 var marker = new google.maps.Marker({
+  // put a marker position at the map center
   position:myCenter,
   });
 
 marker.setMap(map);
 }
-
+// On documant load call initilize
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 

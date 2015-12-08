@@ -1,5 +1,4 @@
 body {
-		width: 70%
 		font: 400 15px Lato, sans-serif;
 		line-height: 1.8;
 		color: #818181;
@@ -27,6 +26,7 @@ h4 {
     opacity:0.90;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
+	 /* !important is to overule  the bootstrap style*/
 		color: #ffffff !important;
 		background-color: #ccc !important;
 }
@@ -41,6 +41,7 @@ h4 {
 		padding: 100px 25px;
 		font-family: Montserrat, sans-serif;
     position: relative;
+		/* note that the image is relative to the style sheet */
     background: #000 url("../img/bg.png") center center;
     width: 100%;
     height: 100%;
@@ -61,18 +62,23 @@ h4 {
 		color: #FEA71A;
 		font-size: 200px;
 }
+/* class to give background diferensiation */
 .altPanel{
 	background-color: #ccc
 }
+
 footer .glyphicon {
 		font-size: 20px;
 		margin-bottom: 20px;
 		color: #FEA71A;
 }
+
+/* this will change the properties if the screen is diferent */
 @media screen and (max-width: 768px) {
 	.col-sm-4 {
 		text-align: center;
 		margin: 25px 0;
+		color: #f00;
 	}
 	.btn-lg {
 			width: 100%;
